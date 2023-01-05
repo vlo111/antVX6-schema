@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "@antv/x6-react-components",
+        "libraryDirectory": "es",
+        "style": true,
+        "transformToDefaultImport": true
+      }
+    ]
+  ]
+}

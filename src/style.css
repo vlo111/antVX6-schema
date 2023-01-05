@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.x6-toolbar {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.snapline line {
+    /*stroke: #59CFDF;*/
+    stroke-width: .8px;
+    stroke-dasharray: 5;
+}
