@@ -1,4 +1,3 @@
-import React from 'react';
 import { data } from '../FakeData';
 
 export const InitPortColors: any = (item: any) => {

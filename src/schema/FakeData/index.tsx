@@ -1,6 +1,7 @@
+import { IGraph } from '../Types/Schema';
 import { Markup } from '@antv/x6';
 
-export const data = [
+export const data: IGraph[] = [
   {
     id: '1',
     height: 40,
@@ -22,7 +23,13 @@ export const data = [
         group: 'list',
         attrs: {
           portBody: {
-            fill: '#F2F2F2'
+            fill: {
+              type: 'linearGradient',
+              stops: [
+                { offset: '15%', color: `${'#4DC7B5'}B3` },
+                { offset: '88%', color: `${'#4DC7B5'}33` }
+              ]
+            }
           },
           portNameLabel: {
             text: 'ID'
@@ -100,7 +107,13 @@ export const data = [
         group: 'list',
         attrs: {
           portBody: {
-            fill: '#F2F2F2'
+            fill: {
+              type: 'linearGradient',
+              stops: [
+                { offset: '15%', color: `${'#F27281'}B3` },
+                { offset: '88%', color: `${'#F27281'}33` }
+              ]
+            }
           },
           portNameLabel: {
             text: 'ID'
@@ -130,7 +143,13 @@ export const data = [
         group: 'list',
         attrs: {
           portBody: {
-            fill: '#F2F2F2'
+            fill: {
+              type: 'linearGradient',
+              stops: [
+                { offset: '15%', color: `${'#F27281'}B3` },
+                { offset: '88%', color: `${'#F27281'}33` }
+              ]
+            }
           },
           portNameLabel: {
             text: 'StudentID'
@@ -196,7 +215,8 @@ export const data = [
             fill: {
               type: 'linearGradient',
               stops: [
-                { offset: '100%', color: '#F2F2F2' }
+                { offset: '15%', color: `${'#F5B452'}B3` },
+                { offset: '88%', color: `${'#F5B452'}33` }
               ]
             }
           },
