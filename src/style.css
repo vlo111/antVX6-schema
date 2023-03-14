@@ -3,16 +3,32 @@ body {
     padding: 0;
 }
 
-.x6-toolbar {
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #F2F2F2;
-}
-
 .snapline line {
     /*stroke: #59CFDF;*/
     stroke-width: .8px;
     stroke-dasharray: 5;
+}
+
+.my-btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .3s;
+    margin-top: 40px;
+    letter-spacing: 3px
+}
+
+.my-btn:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
 }

@@ -10,9 +10,21 @@ import { message } from 'antd';
 
 import '@antv/x6-react-components/es/menu/style/index.css';
 import '@antv/x6-react-components/es/toolbar/style/index.css';
+import styled from 'styled-components';
 
 const Item = ToolbarX6.Item;
 const Group = ToolbarX6.Group;
+
+const ToolbarStyle = styled(ToolbarX6)`
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(219, 219, 219, 0.5);
+
+    display: flex;
+    flex-direction: column;
+`;
 
 const Toolbar: React.FC = () => {
   const onClick: any = async (name: string) => {
@@ -46,12 +58,12 @@ const Toolbar: React.FC = () => {
   };
 
   return <>
-    <ToolbarX6
+    <ToolbarStyle
       hoverEffect={true}
       align="right"
       size="big"
       onClick={onClick}
-      extra={<span>Araks Menu</span>}
+      // extra={<span>Araks Menu</span>}
     >
       <Group>
         <Item
@@ -103,7 +115,7 @@ const Toolbar: React.FC = () => {
           tooltip="Delete (Delete)"
         />
       </Group>
-    </ToolbarX6>
+    </ToolbarStyle>
   </>;
 };
 

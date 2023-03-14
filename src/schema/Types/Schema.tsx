@@ -1,4 +1,5 @@
 interface ILine {
+  sourceMarker?: { name: string }
   stroke: string
   strokeWidth: number
 }
@@ -14,10 +15,11 @@ interface IPosition {
 
 interface IConnection {
   cell: string
-  port: string
+  port?: string
 }
 
 interface ILabel {
+  name?: string
   markup: any
   attrs: {
     fo: {

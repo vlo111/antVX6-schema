@@ -261,9 +261,95 @@ export const data: IGraph[] = [
     ]
   },
   {
+    id: '7',
+    height: 40,
+    shape: 'er-rect',
+    label: 'Phone',
+    width: 150,
+    position: {
+      x: 700,
+      y: 400
+    },
+    attrs: {
+      body: {
+        stroke: '#D789D9'
+      }
+    },
+    ports: [
+      {
+        id: '1-1',
+        group: 'list',
+        attrs: {
+          portBody: {
+            fill: {
+              type: 'linearGradient',
+              stops: [
+                { offset: '15%', color: `${'#D789D9'}B3` },
+                { offset: '88%', color: `${'#D789D9'}33` }
+              ]
+            }
+          },
+          portNameLabel: {
+            text: 'ID'
+          },
+          portTypeLabel: {
+            text: 'STRING'
+          }
+        }
+      },
+      {
+        id: '1-2',
+        group: 'list',
+        attrs: {
+          portBody: {
+            fill: '#F2F2F2'
+          },
+          portNameLabel: {
+            text: 'Name'
+          },
+          portTypeLabel: {
+            text: 'STRING'
+          }
+        }
+      },
+      {
+        id: '1-3',
+        group: 'list',
+        attrs: {
+          portBody: {
+            fill: '#F2F2F2'
+          },
+          portNameLabel: {
+            text: 'Class'
+          },
+          portTypeLabel: {
+            text: 'NUMBER'
+          }
+        }
+      },
+      {
+        id: '1-4',
+        group: 'list',
+        attrs: {
+          portBody: {
+            fill: '#F2F2F2'
+          },
+          portNameLabel: {
+            text: 'Gender'
+          },
+          portTypeLabel: {
+            text: 'BOOLEAN'
+          }
+        }
+      }
+    ]
+  },
+
+  {
     id: '4',
     shape: 'edge',
     label: {
+      name: 'circle',
       markup: Markup.getForeignObjectMarkup(),
       attrs: {
         fo: {
@@ -284,16 +370,24 @@ export const data: IGraph[] = [
     },
     attrs: {
       line: {
+        sourceMarker: {
+          name: 'circle'
+        },
         stroke: '#4DC7B5',
         strokeWidth: 2
       }
     },
+    vertices: [
+      { x: 24, y: 150 },
+      { x: 250, y: 210 }
+    ],
     zIndex: 0
   },
   {
     id: '5',
     shape: 'edge',
     label: {
+      name: 'circle',
       markup: Markup.getForeignObjectMarkup(),
       attrs: {
         fo: {
@@ -314,6 +408,9 @@ export const data: IGraph[] = [
     },
     attrs: {
       line: {
+        sourceMarker: {
+          name: 'circle'
+        },
         stroke: '#F5B452',
         strokeWidth: 2
       }
@@ -324,19 +421,20 @@ export const data: IGraph[] = [
     id: '6',
     shape: 'edge',
     label: {
+      name: 'circle',
       markup: Markup.getForeignObjectMarkup(),
       attrs: {
         fo: {
           width: 120,
           height: 50,
-          x: -65,
+          x: -60,
           y: -21
         }
       }
     },
     source: {
       cell: '1',
-      port: '1-1'
+      port: '1-3'
     },
     target: {
       cell: '2',
@@ -344,7 +442,48 @@ export const data: IGraph[] = [
     },
     attrs: {
       line: {
-        stroke: 'red',
+        sourceMarker: {
+          name: 'circle'
+        },
+        stroke: '#F5B452',
+        strokeWidth: 2
+      }
+    },
+    zIndex: 0
+  },
+  {
+    id: '8',
+    shape: 'edge',
+    label: {
+      name: 'circle',
+      markup: Markup.getForeignObjectMarkup(),
+      attrs: {
+        fo: {
+          width: 120,
+          height: 50,
+          x: -60,
+          y: -21
+        }
+      }
+    },
+    source: {
+      cell: '1',
+      port: '1-4'
+    },
+    target: {
+      cell: '7',
+      port: '7-2'
+    },
+    // vertices: [
+    //   { x: 200, y: 200 },
+    //   { x: 380, y: 120 }
+    // ],
+    attrs: {
+      line: {
+        sourceMarker: {
+          name: 'circle'
+        },
+        stroke: '#F5B452',
         strokeWidth: 2
       }
     },
