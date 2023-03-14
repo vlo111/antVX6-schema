@@ -16,8 +16,8 @@ const Chart: React.FC<{ data: IGraph[] | undefined }> = ({ data }) => {
     if (ref?.current != null) {
       const chart: Graph = new Graph({
         container: ref.current,
-        width: window.innerWidth,
-        height: window.innerHeight,
+        panning: true, // move chart
+        height: window.innerHeight - 84 - 44,
         background: { color: '#f0f0f0' },
         grid: {
           size: 10,
@@ -42,6 +42,7 @@ const Chart: React.FC<{ data: IGraph[] | undefined }> = ({ data }) => {
           minScale: 0.5,
           maxScale: 3
         },
+        autoResize: true,
         onEdgeLabelRendered: (args: OnEdgeLabelRenderedArgs) => {
           const { selectors, edge } = args;
           const content = selectors.foContent as HTMLDivElement;
@@ -62,7 +63,7 @@ const Chart: React.FC<{ data: IGraph[] | undefined }> = ({ data }) => {
           }
         },
         connecting: {
-          connector: 'smooth',
+          // connector: 'smooth',
           router: {
             name: 'er',
             args: {
@@ -87,6 +88,7 @@ const Chart: React.FC<{ data: IGraph[] | undefined }> = ({ data }) => {
       });
 
       chart.resetCells(cells);
+
       chart.zoomToFit({ padding: 10, maxScale: 1 });
     }
   }, [data]);
