@@ -319,5 +319,35 @@ export const data: IGraph[] = [
       }
     },
     zIndex: 0
+  },
+  {
+    id: '6',
+    shape: 'edge',
+    label: {
+      markup: Markup.getForeignObjectMarkup(),
+      attrs: {
+        fo: {
+          width: 120,
+          height: 50,
+          x: -65,
+          y: -21
+        }
+      }
+    },
+    source: {
+      cell: '1',
+      port: '1-1'
+    },
+    target: {
+      cell: '2',
+      port: '2-2'
+    },
+    attrs: {
+      line: {
+        stroke: 'red',
+        strokeWidth: 2
+      }
+    },
+    zIndex: 0
   }
 ];

@@ -62,23 +62,14 @@ const Chart: React.FC<{ data: IGraph[] | undefined }> = ({ data }) => {
           }
         },
         connecting: {
+          connector: 'smooth',
           router: {
             name: 'er',
             args: {
-              offset: 25,
+              offset: 100,
               direction: 'H'
             }
           }
-          // createEdge () {
-          //   return new Shape.Edge({
-          //     attrs: {
-          //       line: {
-          //         stroke: '#A2B1C3',
-          //         strokeWidth: 2
-          //       }
-          //     }
-          //   });
-          // }
         }
       });
 
